@@ -1,3 +1,3 @@
 # CHAY-VPN Landing page
 
-- https://Thanatad.github.io/chaychna-web
+- https://Thanatad.github.io/chaychana-web
