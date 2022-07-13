@@ -2,4 +2,4 @@
 
 - https://Thanatad.github.io/chaychana-web
 - https://Thanatad.github.io/chaychana-web/tips
-- https://Thanatad.github.io/chaychana-web/policy.html
+- https://Thanatad.github.io/chaychana-web/policy
