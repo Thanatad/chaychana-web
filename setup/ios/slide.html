@@ -14,29 +14,33 @@
         type="text/css">
     <link rel="stylesheet" href="https://library.pingendo.com/aquamarine/aquamarine.css">
     <style>
-        * {
-            box-sizing: border-box
-        }
-
         body {
-            background-color: #7e1416;
-            font-family: Verdana, sans-serif;
-            margin: 0
+            background-color: #222;
+            font-family: Arial;
+            margin: 0;
         }
 
-        .mySlides {
-            display: none
+        * {
+            box-sizing: border-box;
         }
 
         img {
             vertical-align: middle;
         }
 
-        /* Slideshow container */
-        .slideshow-container {
-            max-width: 1000px;
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
             position: relative;
-            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+            cursor: pointer;
         }
 
         /* Next & previous buttons */
@@ -44,16 +48,16 @@
         .next {
             cursor: pointer;
             position: absolute;
-            top: 50%;
+            top: 40%;
             width: auto;
             padding: 16px;
-            margin-top: -22px;
+            margin-top: -50px;
             color: white;
             font-weight: bold;
-            font-size: 18px;
-            transition: 0.6s ease;
+            font-size: 20px;
             border-radius: 0 3px 3px 0;
             user-select: none;
+            -webkit-user-select: none;
         }
 
         /* Position the "next button" to the right */
@@ -68,17 +72,6 @@
             background-color: rgba(0, 0, 0, 0.8);
         }
 
-        /* Caption text */
-        .text {
-            color: #f2f2f2;
-            font-size: 15px;
-            padding: 8px 12px;
-            position: absolute;
-            bottom: 8px;
-            width: 100%;
-            text-align: center;
-        }
-
         /* Number text (1/3 etc) */
         .numbertext {
             color: #f2f2f2;
@@ -88,102 +81,113 @@
             top: 0;
         }
 
-        /* The dots/bullets/indicators */
-        .dot {
-            cursor: pointer;
-            height: 15px;
-            width: 15px;
-            margin: 0 2px;
-            background-color: #bbb;
-            border-radius: 50%;
-            display: inline-block;
-            transition: background-color 0.6s ease;
+        /* Container for image text */
+        .caption-container {
+            text-align: center;
+            background-color: #222;
+            padding: 2px 16px;
+            color: white;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+            float: left;
+            width: 16.66%;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+            opacity: 0.6;
         }
 
         .active,
-        .dot:hover {
-            background-color: #717171;
-        }
-
-        /* Fading animation */
-        .fade {
-            animation-name: fade;
-            animation-duration: 1.5s;
-        }
-
-        @keyframes fade {
-            from {
-                opacity: .4
-            }
-
-            to {
-                opacity: 1
-            }
-        }
-
-        /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
-
-            .prev,
-            .next,
-            .text {
-                font-size: 11px
-            }
+        .demo:hover {
+            opacity: 1;
         }
     </style>
 </head>
 
 <body>
+    <h2 style="text-align:center;color: chocolate;">Howto setup ios</h2>
 
-    <div class="slideshow-container">
-
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 6</div>
+    <div class="container">
+        <div class="mySlides">
+            <div class="numbertext"></div>
             <img src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/1.png" style="width:100%">
-            <div class="text">Caption Text</div>
         </div>
 
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 6</div>
+        <div class="mySlides">
+            <div class="numbertext"></div>
             <img src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/2.png" style="width:100%">
-            <div class="text">Caption Two</div>
         </div>
 
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 6</div>
+        <div class="mySlides">
+            <div class="numbertext"></div>
             <img src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/3.png" style="width:100%">
-            <div class="text">Caption Three</div>
         </div>
 
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 6</div>
+        <div class="mySlides">
+            <div class="numbertext"></div>
             <img src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/4.png" style="width:100%">
-            <div class="text">Caption Three</div>
         </div>
-        <div class="mySlides fade">
-            <div class="numbertext">5 / 6</div>
+
+        <div class="mySlides">
+            <div class="numbertext"></div>
             <img src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/5.png" style="width:100%">
-            <div class="text">Caption Three</div>
         </div>
-        <div class="mySlides fade">
-            <div class="numbertext">6 / 6</div>
+
+        <div class="mySlides">
+            <div class="numbertext"></div>
             <img src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/6.png" style="width:100%">
-            <div class="text">Caption Three</div>
         </div>
+
         <a class="prev" onclick="plusSlides(-1)">❮</a>
         <a class="next" onclick="plusSlides(1)">❯</a>
 
-    </div>
-    <br>
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
 
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
+        <div class="row">
+            <div class="column">
+                <img class="demo cursor"
+                    src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/1.png"
+                    style="width:100%" onclick="currentSlide(1)" alt="STEP 1.">
+            </div>
+            <div class="column">
+                <img class="demo cursor"
+                    src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/2.png"
+                    style="width:100%" onclick="currentSlide(2)" alt="STEP 2.">
+            </div>
+            <div class="column">
+                <img class="demo cursor"
+                    src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/3.png"
+                    style="width:100%" onclick="currentSlide(3)" alt="STEP 3.">
+            </div>
+            <div class="column">
+                <img class="demo cursor"
+                    src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/4.png"
+                    style="width:100%" onclick="currentSlide(4)" alt="STEP 4.">
+            </div>
+            <div class="column">
+                <img class="demo cursor"
+                    src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/5.png"
+                    style="width:100%" onclick="currentSlide(5)" alt="STEP 5.">
+            </div>
+            <div class="column">
+                <img class="demo cursor"
+                    src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/setup/ios/6.png"
+                    style="width:100%" onclick="currentSlide(6)" alt="STEP 6.">
+            </div>
+        </div>
     </div>
+
 
     <!-- JavaScript dependencies -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -211,7 +215,8 @@
         function showSlides(n) {
             let i;
             let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
+            let dots = document.getElementsByClassName("demo");
+            let captionText = document.getElementById("caption");
             if (n > slides.length) { slideIndex = 1 }
             if (n < 1) { slideIndex = slides.length }
             for (i = 0; i < slides.length; i++) {
@@ -222,6 +227,7 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
+            captionText.innerHTML = dots[slideIndex - 1].alt;
         }
     </script>
 
