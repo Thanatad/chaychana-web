@@ -131,6 +131,16 @@
                 opacity: 0;
             }
         }
+
+        .store-logo {
+            width: auto;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .store-logo {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -177,12 +187,13 @@
 
         <p style="text-align: center;color: #03A9F4;"> Powered By thanatad b.🔆 </p>
         <input type="image" src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/google-play.png"
-            width="auto" height="100"
+            class="store-logo" height="100"
             onclick="let_download('https://play.google.com/store/apps/details?id=thanatad.chaychana.net');" />
         <input type="image" src="https://raw.githubusercontent.com/Thanatad/chaychana-web/main/app-store.png"
-            width="auto" height="100" onclick="let_download('https://thanatad.github.io/chaychana-web/setup/ios/')" />
-        <input type="image" src="https://hwc-statics.ais.th/appgallery/images/Explore.png"
-            width="auto" height="100" onclick="let_download('https://appgallery.huawei.com/#/app/C101119991')" />
+            height="100" class="store-logo"
+            onclick="let_download('https://thanatad.github.io/chaychana-web/setup/ios/')" />
+        <input class="store-logo" type="image" src="https://hwc-statics.ais.th/appgallery/images/Explore.png"
+            height="100" onclick="let_download('https://appgallery.huawei.com/#/app/C101119991')" />
 
 
 
